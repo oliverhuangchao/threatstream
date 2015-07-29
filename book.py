@@ -17,7 +17,6 @@ class Book:
         print "%s, %d" % (self.publisher,self.year)
         print "----------"
 
-
 class Author:
     def __init__(self,isbn,name,rank):
         self.isbn = isbn
