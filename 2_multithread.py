@@ -1,6 +1,9 @@
 import threading
 
 check = {'aaa':'dream','bbb':'the'}
+for i in check:
+	print "%s --> %s" % (i,check[i])
+
 
 class myThread (threading.Thread):
     def __init__(self, threadID, text):
@@ -22,7 +25,7 @@ class myThread (threading.Thread):
 				self._text = self._text[:start-2] + check[self._text[start:end]] + self._text[end+2:]
 				start = -1
 				end = -1
-		print "finish %d" % self._id
+		print "finish thread %d" % self._id
 		res_list[self._id] = self._text
 
 
