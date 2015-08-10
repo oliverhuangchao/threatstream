@@ -20,11 +20,6 @@ class mythread(threading.Thread):
         sema.release()
 
 
-
-
-
-
-
 n = 10
 avail_table = ['A','B','C','D','E']
 threat_list = []
@@ -34,4 +29,6 @@ for i in range(10):
 
 for item in threat_list:
     item.start()
-    #item.join()
+
+for item in threat_list:
+    item.join()
